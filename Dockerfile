@@ -12,6 +12,6 @@ ADD project project
 RUN apt-get update && \
  apt-get install unzip && \
  apt-get install curl && \
- curl -sL "https://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/sbt-${SBT_VERSION}.zip" && \
+ curl -O "https://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/sbt-${SBT_VERSION}.zip" && \
  unzip sbt-${SBT_VERSION}.zip -d /usr/local && \
  sbt about
