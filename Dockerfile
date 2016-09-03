@@ -7,7 +7,7 @@ ENV PATH ${PATH}:${SBT_HOME}/bin
 
 WORKDIR /opt
 
-ADD project
+ADD project project
 
 RUN apt-get update && \
  apt-get add unzip && \
@@ -15,4 +15,3 @@ RUN apt-get update && \
  curl -sL "https://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/sbt-${SBT_VERSION}.zip" && \
  unzip sbt-${SBT_VERSION}.zip -d /usr/local && \
  sbt about
- 
